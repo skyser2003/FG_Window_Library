@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="stdafx">
+      <UniqueIdentifier>{bc6898fd-85f9-4e4a-be60-f8b1df7d273a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="window">
+      <UniqueIdentifier>{dbf5203b-9064-4340-a9ce-bb97661f787f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WindowManager">
+      <UniqueIdentifier>{36e4b08e-6400-4ff3-924c-6e5c0d539214}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>stdafx</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>window</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowManager.h">
+      <Filter>WindowManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>stdafx</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>window</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowManager.cpp">
+      <Filter>WindowManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
