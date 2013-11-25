@@ -11,3 +11,8 @@
 *.lai
 *.la
 *.a
+
+# Visual Studio
+Release/*
+Debug/*
+x64/*
