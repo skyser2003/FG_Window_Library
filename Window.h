@@ -4,10 +4,8 @@
 #include <vector>
 #include <memory>
 
+class DxCanvas;
 class GraphicsClass;
-class ModelClass;
-class LightClass;
-class TextureClass;
 
 namespace FG
 {
@@ -43,6 +41,6 @@ namespace FG
 		std::function<int(Window*)> mMainFunction;
 		std::vector<Input*> mInputList;
 
-		GraphicsClass* mGraphics;
+		DxCanvas* mCanvas;
 	};
 }

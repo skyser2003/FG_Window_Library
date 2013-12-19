@@ -4,6 +4,8 @@
 #include "Input.h"
 #include "WindowManager.h"
 
+#include "DxCanvas.h"
+
 #include "graphicsclass.h"
 #include "modelclass.h"
 #include "textureclass.h"
@@ -141,17 +143,17 @@ std::vector<Input*>& Window::GetInputList()
 
 GraphicsClass& Window::GetGraphics() const
 {
-	return *mGraphics;
+	return *mCanvas->GetGraphics();
 }
 
 void Window::InitializeDirectX()
 {
-	mGraphics = new GraphicsClass;
-	mGraphics->Initialize(mWidth, mHeight, hWnd);
+	mCanvas = new DxCanvas;
+	mCanvas->Initialize(hWnd, mWidth, mHeight);
 }
 void Window::DestroyDirectX()
 {
-	delete mGraphics;
+	delete mCanvas;
 }
 
 } // namespace FG
