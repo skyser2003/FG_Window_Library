@@ -29,6 +29,7 @@ namespace FG
 		std::vector<Input*>& GetInputList();
 
 		GraphicsClass& GetGraphics() const;
+		DxCanvas& GetCanvas() const;
 	private:
 		void InitializeDirectX();
 		void DestroyDirectX();

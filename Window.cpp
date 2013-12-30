@@ -145,6 +145,10 @@ GraphicsClass& Window::GetGraphics() const
 {
 	return *mCanvas->GetGraphics();
 }
+DxCanvas& Window::GetCanvas() const
+{
+	return *mCanvas;
+}
 
 void Window::InitializeDirectX()
 {
