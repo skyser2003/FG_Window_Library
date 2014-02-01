@@ -144,6 +144,11 @@
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="WindowManager.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FG_DX_Engine\DxCanvas.vcxproj">
+      <Project>{932c8a49-77b1-4fe7-bbf1-b8f7c4f0d60b}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
