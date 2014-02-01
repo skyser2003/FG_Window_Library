@@ -4,11 +4,11 @@
 #include <vector>
 #include <memory>
 
-class DxCanvas;
-class GraphicsClass;
 
 namespace FG
 {
+	class DxCanvas;
+	class GraphicsClass;
 	class Input;
 
 	class Window
