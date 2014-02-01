@@ -150,6 +150,15 @@ DxCanvas& Window::GetCanvas() const
 	return *mCanvas;
 }
 
+int Window::GetScreenWidth() const
+{
+	return mWidth;
+}
+int Window::GetScreenHeight() const
+{
+	return mHeight;
+}
+
 void Window::InitializeDirectX()
 {
 	mCanvas = new DxCanvas;

@@ -30,6 +30,9 @@ namespace FG
 
 		GraphicsClass& GetGraphics() const;
 		DxCanvas& GetCanvas() const;
+
+		int GetScreenWidth() const;
+		int GetScreenHeight() const;
 	private:
 		void InitializeDirectX();
 		void DestroyDirectX();
