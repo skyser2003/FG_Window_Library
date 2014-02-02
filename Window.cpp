@@ -4,12 +4,12 @@
 #include "Input.h"
 #include "WindowManager.h"
 
-#include "DxCanvas.h"
+#include "Canvas/DxCanvas.h"
 
-#include "graphicsclass.h"
-#include "modelclass.h"
-#include "textureclass.h"
-#include "lightclass.h"
+#include "Graphics/graphicsclass.h"
+#include "Model/modelclass.h"
+#include "Texture/textureclass.h"
+#include "Light/lightclass.h"
 
 namespace FG
 {
