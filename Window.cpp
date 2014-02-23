@@ -33,8 +33,8 @@ Window& Window::operator=(const Window& rhs)
 void Window::Initialize(_In_ HINSTANCE hInstance, _In_ int nCmdShow, _In_opt_ HINSTANCE hPrevInstance, _In_ LPTSTR lpCmdLine)
 {
 	this->hInstance = hInstance;
-	mWidth = 800;
-	mHeight = 600;
+	mWidth = 1024;
+	mHeight = 768;
 
 	WNDCLASSEX wc;
 
@@ -83,7 +83,7 @@ int Window::Run()
 {
 	MSG msg;
 
-	do
+	while (true)
 	{
 		for(auto input : mInputList)
 		{
@@ -96,6 +96,11 @@ int Window::Run()
 			DispatchMessage(&msg);
 		}
 
+		if (msg.message == WM_QUIT)
+		{
+			break;
+		}
+
 		int exit = mMainFunction(this);
 
 		for(auto input : mInputList)
@@ -105,8 +110,7 @@ int Window::Run()
 
 		if(exit == 0)
 			break;
-
-	} while (msg.message != WM_QUIT);
+	}
 
 	return static_cast<int>(msg.wParam);
 }

@@ -18,8 +18,8 @@ public:
 	void Destroy();
 
 	std::shared_ptr<Window> CreateWindowInstance();
-
-	std::vector<Window*>& GetWindowList() const;
+	std::vector<std::shared_ptr<Window>>& GetWindowList() const;
+	void CloseAllWindow();
 
 	// 'ranged for' support
 	std::vector<std::shared_ptr<Window>>::iterator begin();

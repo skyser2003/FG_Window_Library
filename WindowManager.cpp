@@ -51,6 +51,16 @@ std::shared_ptr<Window> WindowManager::CreateWindowInstance()
 
 	return sharedWindow;
 }
+void WindowManager::CloseAllWindow()
+{
+	for (auto window : windowList)
+	{
+		window->Destroy();
+		CloseWindow(window->GetHwnd());
+	}
+
+	windowList.clear();
+}
 
 std::vector<std::shared_ptr<Window>>::iterator WindowManager::begin()
 {
