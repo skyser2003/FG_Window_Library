@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "WindowManager.h"
 
-#include "Window.h"
-#include "Input.h"
+#include "Window/Window.h"
+#include "Input/Input.h"
 
 namespace FG
 {

@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "Window.h"
 
-#include "Input.h"
-#include "WindowManager.h"
+#include "Input/Input.h"
+#include "WindowManager/WindowManager.h"
 
 #include "Canvas/DxCanvas.h"
 
