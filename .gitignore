@@ -17,3 +17,6 @@ Release/*
 Debug/*
 x64/*
 *.user
+
+# CMake
+build
