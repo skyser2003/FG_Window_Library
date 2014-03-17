@@ -22,7 +22,7 @@ Window& Window::operator=(const Window& rhs)
 {
 	mMainFunction = rhs.mMainFunction;
 	
-	for(auto* input : rhs.mInputList)
+	for(auto input : rhs.mInputList)
 	{
 		RegisterInput(input);
 	}
@@ -121,10 +121,9 @@ void Window::Destroy()
 	mWidth = 0;
 	mHeight = 0;
 
-	for(auto* input : mInputList)
+	for(auto input : mInputList)
 	{
 		input->Destroy();
-		delete input;
 	}
 
 	mInputList.clear();
@@ -135,12 +134,12 @@ HWND Window::GetHwnd() const
 	return hWnd;
 }
 
-void Window::RegisterInput(Input* input)
+void Window::RegisterInput(std::shared_ptr<Input> input)
 {
 	input->Initialize();
 	mInputList.push_back(input);
 }
-std::vector<Input*>& Window::GetInputList()
+std::vector<std::shared_ptr<Input>>& Window::GetInputList()
 {
 	return mInputList;
 }

@@ -25,8 +25,8 @@ namespace FG
 
 		HWND GetHwnd() const;
 
-		void RegisterInput(Input* input);
-		std::vector<Input*>& GetInputList();
+		void RegisterInput(std::shared_ptr<Input> input);
+		std::vector<std::shared_ptr<Input>>& GetInputList();
 
 		GraphicsClass& GetGraphics() const;
 		DxCanvas& GetCanvas() const;
@@ -43,7 +43,7 @@ namespace FG
 		int mWidth, mHeight;
 
 		std::function<int(Window*)> mMainFunction;
-		std::vector<Input*> mInputList;
+		std::vector<std::shared_ptr<Input>> mInputList;
 
 		DxCanvas* mCanvas;
 	};
