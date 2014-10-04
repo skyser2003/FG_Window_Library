@@ -53,7 +53,9 @@ ADD_LIBRARY (WindowLibrary
 ${WL_SOURCE_FILES}
 )
 FOREACH(subdir ${WL_SOURCE_SUBDIRS})
-    SOURCE_GROUP(${subdir} FILES ${WL_SOURCE_DIR}/${subdir}/*.cpp ${WL_SOURCE_DIR}/${subdir}/*.h)
+	STRING(REPLACE "/" "\\" tempSubdir ${subdir})
+	FILE(GLOB subdir_files ${WL_SOURCE_DIR}/${subdir}/*.cpp ${WL_SOURCE_DIR}/${subdir}/*.h)
+    SOURCE_GROUP(${tempSubdir} FILES ${subdir_files})
 ENDFOREACH()
 
 INCLUDE_DIRECTORIES( ${WL_SOURCE_DIR} )
